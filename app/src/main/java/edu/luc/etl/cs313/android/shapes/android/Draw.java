@@ -39,7 +39,10 @@ public class Draw implements Visitor<Void> {
 
     @Override
     public Void onFill(final Fill f) {
+        Style style = paint.getStyle();
+        paint.setStyle(Style.FILL_AND_STROKE);
         f.getShape().accept(this);
+        paint.setStyle(style);
         return null;
     }
 
@@ -69,7 +72,10 @@ public class Draw implements Visitor<Void> {
 
     @Override
     public Void onOutline(Outline o) {
+        Style style = paint.getStyle();
+        paint.setStyle(Style.STROKE);
         o.getShape().accept(this);
+        paint.setStyle(style);
         return null;
     }
 
