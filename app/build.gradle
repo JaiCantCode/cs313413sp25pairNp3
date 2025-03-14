@@ -7,8 +7,8 @@ buildscript {
 }
 
 android {
-    compileSdkVersion 31
-    buildToolsVersion "31.0.0"
+    compileSdkVersion 35
+    buildToolsVersion "35.0.0"
 
     defaultConfig {
         applicationId "edu.luc.etl.cs313.android.shapes"
